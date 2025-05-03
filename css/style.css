@@ -1,0 +1,1666 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --color-primary: #6c9bcf;
+  --color-danger: #ff0060;
+  --color-success: #1b9c85;
+  --color-warning: #f7d060;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+  --box-shadow-1: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dark-mode-variables {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  user-select: none;
+  overflow-x: hidden;
+  color: var(--color-dark);
+  background-color: var(--color-background);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 0.87rem;
+}
+
+small {
+  font-size: 0.76rem;
+}
+
+p {
+  color: var(--color-dark-variant);
+}
+
+b {
+  color: var(--color-dark);
+}
+
+.text-muted {
+  color: var(--color-info-dark);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.danger {
+  color: var(--color-danger);
+}
+
+.success {
+  color: var(--color-success);
+}
+.error {
+  color: var(--color-danger);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
+.wrapper {
+  padding: 1%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+
+.clearfix {
+  clear: both;
+  float: none;
+}
+
+/* CSS for navigation section */
+.nav {
+  width: 100%;
+  padding: 0 60px;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.nav nav {
+  display: flex;
+}
+
+.nav .logo {
+  height: 45px;
+  width: fit-content;
+  align-self: center;
+  cursor: pointer;
+}
+
+.nav .logo img {
+  height: 100%;
+}
+
+.nav ul {
+  height: 100%;
+  padding-left: 40px;
+  list-style-type: none;
+  display: flex;
+  align-self: center;
+}
+
+.nav ul li {
+  position: relative;
+}
+
+.nav ul li a {
+  display: block;
+  padding: 0 10px;
+  height: 100%;
+  line-height: 60px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  background-color: #ffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all ease-in-out 100ms;
+}
+
+.nav ul li a:hover {
+  background-color: #2a2a2a;
+  color: #ffff;
+}
+
+/* DROPDOWN styling Start */
+.nav ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  left: -40px;
+  transition: all ease-in-out 100ms;
+}
+
+.nav ul li ul li a {
+  white-space: nowrap;
+}
+
+ul li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.user-account {
+  width: 100%;
+}
+/* DROPDOWN styling End */
+
+.nav .search {
+  display: flex;
+  align-self: center;
+  position: relative;
+}
+
+.nav form {
+  height: 40px;
+  padding-right: 5px;
+  display: flex;
+  border: 1px solid #aeaeae;
+  border-radius: 20px 100px 100px 20px;
+  width: fit-content;
+  align-self: center;
+}
+
+.nav form input {
+  height: 100%;
+  width: 300px;
+  padding: 0 10px 0 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+}
+
+.nav form input:focus {
+  border: 1px solid #111;
+}
+
+.nav form button {
+  width: fit-content;
+  padding: 0 5px 0 10px;
+  border-style: none;
+  background: transparent;
+  border: none;
+}
+
+.nav form button img {
+  height: 24px;
+  padding-top: 15%;
+  cursor: pointer;
+}
+
+.nav .cart {
+  height: 60px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.nav .cart .cart-img {
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  align-self: center;
+}
+
+/* CSS for Login Page section */
+.login-page {
+  background: url(../img/background-img.png) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.login-wrapper {
+  padding-top: 6%;
+  vertical-align: middle;
+}
+
+.login .back-home {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+}
+
+.login .back-home p {
+  color: white;
+  transition: all ease-in-out 0.2s;
+}
+
+.login .back-home p:hover {
+  color: var(--color-info-dark);
+}
+
+.input {
+  height: 44px;
+  background-color: #05060f0a;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    background 0.2s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+}
+
+.input:hover,
+.input:focus {
+  outline: none;
+  border-color: #05060f;
+}
+
+.input:focus {
+  color: #05060fc2;
+}
+
+.message {
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login a img {
+  width: 4%;
+}
+
+.login {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 3rem auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login h1,
+.login label {
+  color: white;
+}
+
+.input1 {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.full_name_username {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.login a {
+  color: #a3ebb1;
+  transition: all ease-in-out 0.2s;
+}
+
+.login a:hover {
+  color: #18a558;
+}
+
+.remember-me {
+  margin-right: 3rem;
+}
+
+/* .btn-submit {
+  padding: 1%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 18rem;
+  line-height: 2rem;
+} */
+
+.btn-submit {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 18rem;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+}
+
+.btn-submit:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+.signup-text {
+  margin-left: 20%;
+  color: var(--color-white);
+}
+
+/* CSS for Forget Password */
+.forget-password {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.form-container {
+  max-width: 400px;
+  background-color: #fff;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #212121;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .logo-container {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #1778f2;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  color: #fff;
+  background-color: #212121;
+  border: none;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin: 12px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #313131;
+}
+
+.form-container .link {
+  color: #1778f2;
+  text-decoration: none;
+}
+
+.form-container .signup-link {
+  align-self: center;
+  font-weight: 500;
+}
+
+.form-container .signup-link .link {
+  font-weight: 400;
+}
+
+.form-container .link:hover {
+  text-decoration: underline;
+}
+
+/* CSS for TNG payment */
+.tng-box {
+  padding: 10%;
+  width: 1200px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.tng-logo {
+  width: 50px;
+}
+
+.box-primary {
+  padding: 3%;
+  border: 1px solid black;
+  grid-area: 1 / 1 / 3 / 2;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.box-secondary {
+  padding: 3%;
+  border: 1px solid black;
+  grid-area: 1 / 2 / 2 / 3;
+  border-top-right-radius: 15px;
+}
+
+.box-third {
+  padding: 3%;
+  border: 1px solid black;
+  grid-area: 2 / 2 / 3 / 3;
+  border-bottom-right-radius: 15px;
+}
+
+.box-four {
+  padding: 3%;
+  width: 180px;
+  height: 80px;
+  border: 1px solid black;
+  margin: 10% 35% 20%;
+  border-radius: 18px;
+}
+
+.box-third input[type="submit"] {
+  width: 80%;
+  padding: 3%;
+  background-color: #ff4757;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.tng-payment p {
+  font-size: 1rem;
+}
+
+/* CSS for product */
+.product {
+  margin-top: 60px;
+  background-color: #f1f2f6;
+}
+
+.wrapper-product {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper-product h1 {
+  padding-top: 4%;
+  padding-bottom: 3%;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+.col4 {
+  float: left;
+}
+
+.card {
+  width: 18%;
+  background-color: #2f3542;
+  padding: 2%;
+  margin: 2% 3% 2% 0;
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h1 {
+  width: 100%;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.card p {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.addtocart {
+  align-items: center;
+}
+
+.card input[type="number"] {
+  width: 30%;
+  height: 100%;
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
+
+.card input[type="submit"] {
+  width: 50%;
+  height: auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #7bed9f;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+}
+
+.card input[type="submit"]:hover {
+  color: #57606f;
+  background-color: #2ed573;
+}
+
+.card a {
+  color: white;
+}
+
+.card a:hover {
+  color: lightgray;
+}
+
+/* CSS for ranking */
+
+.ranking {
+  margin-top: 100px;
+}
+
+.search-ranking select {
+  padding: 1%;
+  font-size: 1.1rem;
+  border: 2px solid #dfe4ea;
+  color: #57606f;
+}
+
+.search-ranking button {
+  padding: 1% 3%;
+  font-size: 1.1rem;
+  background-color: #dfe4ea;
+  color: #57606f;
+  cursor: pointer;
+}
+
+.search-ranking button:active {
+  background-color: #747d8c;
+  color: white;
+}
+
+.ranking-layout {
+  width: 80%;
+}
+
+.ranking-layout table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.nanquan-details table {
+  border-collapse: separate;
+}
+
+.ranking h2 {
+  font-size: 2rem;
+  margin-bottom: 2%;
+}
+
+.ranking h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2%;
+}
+
+.category-name {
+  background-color: #dfe4ea;
+  padding: 2% 0 0 2%;
+}
+
+.nanquan-details {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.details-layout {
+  padding: 1%;
+  border: 1px solid #dfe4ea;
+}
+
+.details-layout tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.details-layout .rank {
+  padding: 0.5%;
+  vertical-align: top;
+}
+
+.nanquan-details th {
+  font-weight: bold;
+}
+
+.nanquan-details th,
+.nanquan-details td {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #747d8c;
+}
+
+/* CSS for Announcement */
+
+.announcement {
+  margin-top: 70px;
+}
+
+.announcement-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.announcement h1 {
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 3.6rem;
+  margin-bottom: 4%;
+}
+
+.announcement input[type="date"] {
+  background-color: #1e90ff;
+  color: #f1f2f6;
+  margin-bottom: 5%;
+  padding: 1%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.announcement input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.announcement-list {
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.announcement-list tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.announcement-list th {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  padding: 1% 0 1% 0;
+  color: #2f3542;
+}
+
+.announcement-list h3 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+.announcement-list h4 {
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+}
+
+.announcement-list p {
+  color: #57606f;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  font-weight: lighter;
+}
+
+.announcement-list .announcement-dates {
+  width: 20%;
+  padding-left: 1%;
+  vertical-align: top;
+}
+
+.announcement-list .announcement-details {
+  padding-left: 2%;
+  padding-right: 5%;
+  width: 80%;
+}
+
+/* CSS for events */
+.events {
+  margin-top: 60px;
+  background-color: #ff7f50;
+  overflow-x: hidden;
+}
+
+.events-form-wrapper {
+  width: 100%;
+  padding-left: 1%;
+  margin: 0 auto;
+  margin-bottom: 2%;
+}
+
+.events h1 {
+  margin-top: 4%;
+  margin-bottom: 3%;
+  font-size: 3rem;
+  line-height: 3.2rem;
+}
+
+.events input[type="date"] {
+  width: 10%;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  margin-left: 2%;
+}
+
+.events select {
+  width: 10%;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.events-lists {
+  position: relative;
+  border: 1px solid black;
+}
+
+.events-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards-wrapper {
+  width: 20%;
+}
+
+.events-card {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  position: relative;
+  border-top: none;
+  border-left: none;
+  z-index: 1;
+}
+
+.events-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: #f1f2f6;
+  transition: height 0.5s ease-out;
+  z-index: 0;
+}
+
+.events-card:hover::before {
+  height: 100%;
+  z-index: -1;
+}
+
+.events-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.events-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.events-info h3 {
+  font-size: 1.2rem;
+  margin: 5% 0 3% 0;
+  font-weight: normal;
+}
+
+.events-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 3%;
+  font-weight: normal;
+}
+
+.events-info p {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 0;
+  line-height: 130%;
+}
+
+.events-info {
+  margin-bottom: 120px;
+  position: relative;
+  z-index: 1;
+}
+
+.events-date p {
+  font-size: 1.2rem;
+  margin-bottom: 1%;
+}
+
+.events-date a {
+  color: black;
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+.events-date {
+  position: absolute;
+  bottom: 14px;
+  transition: all 0.25s ease-in-out 0.25s;
+}
+
+.events-card:hover .events-date {
+  bottom: 65px;
+  transition: all 0.25s ease-in-out;
+}
+
+.events-btn {
+  position: absolute;
+  display: flex;
+  width: calc(100% - 5% - 5%);
+  opacity: 0;
+  bottom: 14px;
+  z-index: 2;
+  transition: all 0.25s ease-in-out;
+}
+
+.events-card:hover .events-btn {
+  opacity: 1;
+  transition: all 0.25s ease-in-out 0.25s;
+}
+
+.events-btn input {
+  width: 50%;
+  font-size: 1.4rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 1% 0 1% 0;
+}
+
+.events-btn input[name="buy-ticket-btn"] {
+  border: 1px solid #2f3542;
+  background-color: white;
+  color: #2f3542;
+  transition: all ease-in-out 200ms;
+}
+
+.events-btn input[name="buy-ticket-btn"]:hover {
+  background-color: #a4b0be;
+  color: white;
+}
+
+.events-btn input[name="participate-btn"] {
+  border: none;
+  background-color: #2f3542;
+  color: white;
+  transition: all ease-in-out 200ms;
+}
+
+.events-btn input[name="participate-btn"]:hover {
+  background-color: #a4b0be;
+  color: #2f3542;
+}
+
+/* CSS for timetable */
+.timetable {
+  margin-top: 60px;
+  background-color: #70a1ff;
+}
+
+.timetable-titles {
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+.timetable-titles h1 {
+  font-size: 3rem;
+  line-height: 3.2rem;
+  margin-bottom: 0.5%;
+  color: #2f3542;
+}
+
+.timetable-titles h2 {
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #57606f;
+}
+
+.timetable table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2%;
+}
+
+.timetable .timetable-time th {
+  background-color: #ff6348;
+}
+
+.timetable table th {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  padding: 3% 0 3% 0;
+  border: 1px solid black;
+  width: 16.6%;
+  background-color: #ffa502;
+  color: #f1f2f6;
+}
+
+.timetable table td {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  padding: 1%;
+  border: 1px solid black;
+  background-color: #eccc68;
+  width: 16.6%;
+}
+
+/* CSS for timetable selection */
+
+/* CSS for participate */
+.participate {
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+.participate h1 {
+  padding: 2% 0 4% 0;
+  font-size: 3.4rem;
+  font-weight: bold;
+}
+
+.participate-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.participate-ticket {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin-bottom: 2%;
+}
+
+.participate-img {
+  width: 30%;
+  padding: 2.5%;
+  border-right: 1px solid black;
+}
+
+.participate-img img {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.participate-info {
+  width: 65%;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.participate-info h1 {
+  padding: 0;
+}
+
+.participate-location-details {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.participate-location-details .participate-date {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+}
+
+.participate-location-details p {
+  font-size: 1.1rem;
+}
+
+.participate-location-details .participate-time {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+}
+
+.participate-location-details .participate-location {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+}
+
+.participate-location-details .participate-location a {
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.participate-location-details .participate-location a:hover {
+  color: darkgrey;
+}
+
+.participate-img-wrapper {
+  width: 15%;
+  padding-right: 5%;
+}
+
+.participate-img-wrapper img {
+  width: 100%;
+}
+
+.participate-info a {
+  color: black;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+
+.participate-info a:hover {
+  color: darkgrey;
+}
+
+.participate-btn {
+  width: 5%;
+  writing-mode: vertical-rl;
+}
+
+.participate-btn p {
+  font-size: 4rem;
+  width: 100%;
+  background-color: black;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.participate-btn p:hover {
+  background-color: white;
+  color: black;
+}
+
+.participate-btn a {
+  width: 100%;
+  height: 100%;
+}
+
+/* CSS for account */
+
+.account {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  background-color: #dfe4ea;
+}
+
+.account .account-wrapper {
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f2f6;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.account-profile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 7% 0;
+}
+
+.account-profile-img {
+  width: 10%;
+  aspect-ratio: 1/1;
+}
+
+.account-profile-img img {
+  width: 100%;
+}
+
+.account-logout {
+  padding-top: 3%;
+  padding-left: 1%;
+}
+
+.account-logout p {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.account-details {
+  width: 100%;
+  display: flex;
+  border: 1px solid black;
+}
+
+.account-nav {
+  display: inline;
+  width: 20%;
+  border-right: 1px solid black;
+}
+
+.account-nav ul li {
+  border: 1px solid black;
+  list-style: none;
+  padding: 5% 0 5% 4%;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  background-color: #1e90ff;
+  color: white;
+}
+
+.account-nav ul li:hover,
+.account-nav ul li.active {
+  background-color: #70a1ff;
+  color: lightgray;
+}
+
+.account-information {
+  width: 80%;
+  background-color: #f1f2f6;
+}
+
+.account-information h1 {
+  margin-top: 2.5%;
+  margin-bottom: 3%;
+  margin-left: 5.5%;
+}
+
+.user-information {
+  display: flex;
+}
+
+.account-information form input[type="text"],
+.account-information form input[type="email"],
+.account-information form input[type="password"],
+.account-information form input[type="submit"] {
+  width: 18rem;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  padding: 1%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+}
+
+.account-information form {
+  border: 1px solid black;
+  width: 50%;
+  border-left: 0;
+}
+
+.form1 {
+  padding-top: 2%;
+  padding-bottom: 3%;
+}
+
+.form1 label,
+.form2 label {
+  margin-left: 6%;
+}
+
+.form2 {
+  padding-top: 2%;
+  padding-bottom: 3%;
+}
+
+/* CSS */
+.account-information form input[type="submit"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+  border-radius: 6px;
+  color: #3d3d3d;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.account-information form input[type="submit"]:hover {
+  background-color: #dfe4ea;
+}
+.account-information form input[type="submit"]:focus {
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1),
+    0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+/* CSS for Footer */
+
+footer {
+  background-color: #2f3542;
+  color: white;
+}
+
+footer h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  align-self: center;
+}
+
+.sm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7% 0 2%;
+}
+
+.sm-links {
+  height: 60px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.sm-links img {
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  align-self: center;
+}
+
+footer a {
+  color: #747d8c;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+}
+
+footer a:hover {
+  color: #a4b0be;
+}
+
+.col-4 {
+  width: 20%;
+  padding: 2%;
+  float: left;
+  margin-bottom: 8%;
+}
+
+.col-4 p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* CSS for homepage */
+.homepage section {
+  margin-top: 60px;
+  width: 100%;
+  height: auto;
+}
+
+.homepage h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 3rem;
+  margin-bottom: 1%;
+}
+
+.titles {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: -0.045em;
+}
+
+.titles::before,
+.titles::after {
+  content: "";
+  border-top: 3px solid #ddd;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 100px;
+  display: block;
+  position: absolute;
+}
+
+.titles::before {
+  right: 100%;
+  margin-right: 20px;
+}
+
+.titles::after {
+  left: 100%;
+  margin-left: 20px;
+}
+
+.homepage h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+/* CSS for event in homepage */
+.event-4 {
+  margin-bottom: 4%;
+}
+
+.event h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.event-description p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.event-description {
+  display: flex;
+  justify-content: center;
+}
+
+.w-70 {
+  width: 70%;
+  padding: 0 2% 0 0;
+}
+
+.w-30 {
+  width: 30%;
+  padding: 0 2%;
+}
+
+.underline {
+  border-bottom: 1px solid grey;
+  padding: 0 0 6%;
+}
+
+.right-line {
+  border-right: 1px solid grey;
+}
+
+.date {
+  color: #ff4757;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+
+/* CSS for welcome message in homepage */
+
+.welcome .background {
+  width: 100%;
+  height: auto;
+  padding: 5% 0;
+  background-color: purple;
+  color: white;
+}
+
+.welcome .background h1 {
+  font-weight: bold;
+  line-height: 60px;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
+.welcome .background p {
+  font-size: 1.5rem;
+  line-height: 40px;
+}
+
+/* CSS for product in homepage */
+
+.product-3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-2 {
+  background-color: #f1f2f6;
+  flex-basis: 31%;
+  gap: 500px 400px;
+  margin-top: 3%;
+}
+
+.image {
+  width: fit-content;
+  height: fit-content;
+  padding: 1%;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-description {
+  padding: 0 7%;
+}
+
+.product-description h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  border-bottom: 1px solid grey;
+}
+
+.product-description p {
+  font-weight: lighter;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: #57606f;
+}
+
+.card-2 a {
+  color: #2f3542;
+  transition: all ease-in-out 200ms;
+}
+
+.card-2 a:hover {
+  color: #a4b0be;
+}
+
+.space {
+  margin-top: 5%;
+}
+
+/* CSS for FAQ in homepage */
+.faq {
+  background-color: #5352ed;
+  color: #ffffff;
+  padding: 5% 0;
+}
+
+.faq h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+.faq-questions {
+  display: flex;
+  justify-content: center;
+}
+
+.faq-questions .faq-wrapper {
+  padding: 2%;
+  width: 70%;
+}
+
+.faq-wrapper h2 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  cursor: pointer;
+  margin-bottom: 3%;
+}
+
+.faq h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.6rem;
+}
+
+.faq button {
+  width: 20%;
+  padding: 2%;
+  background-color: #ffa502;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+}
+
+.faq button:hover {
+  background-color: #eccc68;
+  color: #dfe4ea;
+}
