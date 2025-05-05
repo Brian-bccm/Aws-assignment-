@@ -2,7 +2,7 @@
     <footer>
         <div class="wrapper">
             <div class="sm">
-                <h1>Wushu Society</h1>
+                <h1>GP World</h1>
                 <div class="sm-links">
                     <img src="../img/instagram.png" alt="instagram">
                     <img src="../img/facebook.png" alt="facebook">
