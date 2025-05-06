@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wushu Society</title>
     <!-- <link rel="stylesheet" href="../css/reset.css" /> -->
-    <link rel="icon" type="image/x-icon" href="../img/wushu_society_logo.png">
+    <link rel="icon" type="image/x-icon" href="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/wushu_society_logo.png">
     <link rel="stylesheet" href="../css/style.css" />
     <script src="../js/myjs.js"></script>
   </head>

@@ -30,7 +30,7 @@ $result1 = mysqli_query($conn, $sql1);
                     <div class="events-card">
                         <div class="events-img">
                             <a href="">
-                                <img src="../img/event/<?php echo $row['event_img'] ?>">
+                                <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/event/<?php echo $row['event_img'] ?>">
                             </a>
                         </div>
                         <div class="events-info">

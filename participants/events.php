@@ -22,7 +22,7 @@
 <!-- Navbar (sit on top) -->
 <section class="nav">
         <div class="logo">
-          <img src="../img/wushu_society_logo.png" alt="Wushu Society Logo" />
+          <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/wushu_society_logo.png" alt="Wushu Society Logo" />
         </div>
         <nav>
             <ul>
@@ -59,7 +59,7 @@
             <button type="submit"><img src="../img/search.png" alt="search button"></button>
           </form>
           <div class="cart">
-            <img src="../img/grocery-store.png" alt="cart" class="cart-img">
+            <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/grocery-store.png" alt="cart" class="cart-img">
           </div>
         </div>
     </section>
@@ -75,7 +75,7 @@
 
 <div style="background-color: black;" >
   <div class="w3-display-container" style="margin-bottom:50px  ">
-      <img src="../img/kungfu2.webp" style="width:100%">
+      <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/kungfu2.webp" style="width:100%">
       <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
        style="bottom:10%;opacity:0.7;width:70%">
       <h2><b>Events</b></h2>
@@ -92,7 +92,7 @@
   <div class="w3-row-padding w3-text-white w3-large">
     <div class="w3-half w3-margin-bottom">
       <div class="w3-display-container">
-        <img src="../img/place1.PNG"  style="width:100%">
+        <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/place1.PNG"  style="width:100%">
         <span style="text-decoration: solid;" class="w3-display-bottomleft w3-padding">National Competition</span>
       </div>
     </div>
@@ -100,13 +100,13 @@
       <div class="w3-row-padding" style="margin:0 -16px">
         <div class="w3-half w3-margin-bottom">
           <div class="w3-display-container">
-            <img src="../img/place 2.PNG"  style="width:100%">
+            <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/place 2.PNG"  style="width:100%">
             <span style="text-decoration: solid;" class="w3-display-bottomleft w3-padding">U16 Competition</span>
           </div>
         </div>
         <div class="w3-half w3-margin-bottom">
           <div class="w3-display-container">
-            <img src="../img/place3.PNG"  style="width:100%">
+            <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/place3.PNG"  style="width:100%">
             <span style="text-decoration: solid;" class="w3-display-bottomleft w3-padding">U17 Competition</span>
           </div>
         </div>
@@ -114,13 +114,13 @@
       <div class="w3-row-padding" style="margin:0 -16px">
         <div class="w3-half w3-margin-bottom">
           <div class="w3-display-container">
-            <img src="../img/place 5.jpeg"  style="width:100%">
+            <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/place 5.jpeg"  style="width:100%">
             <span style="text-decoration: solid;" class="w3-display-bottomleft w3-padding " >U20 Competition</span>
           </div>
         </div>
         <div class="w3-half w3-margin-bottom">
           <div class="w3-display-container">
-            <img src="../img/place4.jpeg"  style="width:100%">
+            <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/place4.jpeg"  style="width:100%">
             <span style="text-decoration: solid;" class="w3-display-bottomleft w3-padding">Free-For-All Competition</span>
           </div>
         </div>
@@ -135,7 +135,7 @@
   </div>
   <div class="w3-row-padding">
     <div class="w3-half w3-margin-bottom">
-      <img src="../img/place1.PNG" alt="Norway" style="width:100%">
+      <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/place1.PNG" alt="Norway" style="width:100%">
       <div class="w3-container w3-white">
         <h3>U16 Competition</h3>
         <p class="w3-opacity">Fri 27 April 2024</p>
@@ -144,7 +144,7 @@
       </div>
     </div>
     <div class="w3-half w3-margin-bottom">
-      <img src="../img/place 2.PNG" alt="Austria" style="width:100%">
+      <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/place 2.PNG" alt="Austria" style="width:100%">
       <div class="w3-container w3-white">
         <h3>U17</h3>
         <p class="w3-opacity">Sat 28 March 2024</p>
@@ -154,7 +154,7 @@
     </div>
     <br>
     <div class="w3-half w3-margin-bottom">
-      <img src="../img/place3.PNG" alt="Austria" style="width:100%">
+      <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/place3.PNG" alt="Austria" style="width:100%">
       <div class="w3-container w3-white">
         <h3>National</h3>
         <p class="w3-opacity">Sat 28 March 2024</p>
@@ -199,9 +199,9 @@
             <div class="sm">
                 <h1>Wushu Society</h1>
                 <div class="sm-links">
-                    <img src="../img/instagram.png" alt="instagram">
-                    <img src="../img/facebook.png" alt="facebook">
-                    <img src="../img/youtube.png" alt="youtube">
+                    <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/instagram.png" alt="instagram">
+                    <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/facebook.png" alt="facebook">
+                    <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/youtube.png" alt="youtube">
                 </div>
             </div>
             <div class="col-4">

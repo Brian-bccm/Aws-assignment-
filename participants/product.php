@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-<?php include("parties/navbar.php"); ?>
-
+    <?php include("parties/navbar.php"); ?>
 <head>
     <title>Product Page</title>
     <link rel="stylesheet" href="../css/style.css" />
@@ -35,30 +34,16 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 20px;
-            margin-bottom: 3rem;
         }
 
         .product {
             border: 1px solid #ccc;
-            border-radius: calc(2rem + 1.6rem);
-            padding: 2rem;
-            margin-top: 1.6rem;
-
-            .product-img {
-                aspect-ratio: 1/1;
-                border-radius: 1.6rem;
-                overflow: hidden;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
+            border-radius: 5px;
+            padding: 20px;
         }
 
         .product h2 {
-            margin-top: 1rem;
+            margin-top: 0;
         }
 
         .product p {
@@ -97,7 +82,6 @@
         }
     </style>
 </head>
-
 <body>
     <?php
     include("../admin/db_connect.php");
@@ -116,15 +100,13 @@
                     ?>
                     <div class="product">
                         <div class="product-img">
-                            <img src="../img/product/<?php echo $row2['product_img'] ?>" width="200px" height="190px"
-                                alt="product image">
+                            <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/product/<?php echo $row2['product_img'] ?>" width="200px" height="190px" alt="product image">
                         </div>
                         <h2><?php echo $row2['product_id']; ?></h2>
                         <p class="info"><?php echo $row2['product_description']; ?></p>
                         <p class="price"><?php echo $row2['product_price']; ?></p>
                         <br>
-                        <a href='cart.php?action=add&product_id=<?php echo $row2['product_id']; ?>' class="btn-add-to-cart">Add to
-                            Cart</a>
+                        <a href='cart.php?action=add&product_id=<?php echo $row2['product_id']; ?>' class="btn-add-to-cart">Add to Cart</a>
                     </div>
                     <?php
                 }
@@ -139,5 +121,4 @@
 
     <?php include("parties/footer.php"); ?>
 </body>
-
 </html>

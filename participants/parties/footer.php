@@ -4,9 +4,9 @@
             <div class="sm">
                 <h1>GP World</h1>
                 <div class="sm-links">
-                    <img src="../img/instagram.png" alt="instagram">
-                    <img src="../img/facebook.png" alt="facebook">
-                    <img src="../img/youtube.png" alt="youtube">
+                    <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/instagram.png" alt="instagram">
+                    <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/facebook.png" alt="facebook">
+                    <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/youtube.png" alt="youtube">
                 </div>
             </div>
             <div class="col-4">

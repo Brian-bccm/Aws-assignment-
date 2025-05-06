@@ -1,8 +1,4 @@
 <?php
-// Use statements for clarity (optional)
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 
 if (isset($_POST['reset-request-submit'])) {
 
@@ -38,24 +34,29 @@ if (isset($_POST['reset-request-submit'])) {
     }
     mysqli_stmt_close($stmt);
 
-    require "../vendor/autoload.php";
+    require "../vendor/autoload.php"; 
+
+    // Use statements for clarity (optional)
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
 
     $mail = new PHPMailer(true); // true enables SMTP
 
     $mail->IsSMTP();                           // Fixed.
-    $mail->Host = 'ssl://smtp.gmail.com'; // Fixed.
-    $mail->Port = '465';                  // Fixed.
-    $mail->SMTPAuth = true;                   // Fixed.
-    $mail->Username = 'dinjun0802@gmail.com';   // Your Gmail account name.
-    $mail->Password = 'Weedj0802';         // Your Gmail password.
+    $mail->Host      = 'ssl://smtp.gmail.com'; // Fixed.
+    $mail->Port      = '465';                  // Fixed.
+    $mail->SMTPAuth  = true;                   // Fixed.
+    $mail->Username  = 'dinjun0802@gmail.com';   // Your Gmail account name.
+    $mail->Password  = 'Weedj0802';         // Your Gmail password.
 
     try {
         // Mail details.
         $mail->SetFrom('dinjun0802@gmail.com', 'noreplyuser'); // Your Gmail address.
         $mail->AddAddress($to);
-        $mail->Subject = $subject;
-        $mail->Body = $message;
-
+        $mail->Subject  = $subject;
+        $mail->Body     = $message;
+    
         $mail->Send();
         echo '<p class="ok">Message successfully sent!</p>';
     } catch (Exception $e) {

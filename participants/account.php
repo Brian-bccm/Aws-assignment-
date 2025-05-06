@@ -1,93 +1,92 @@
-<?php include("parties/navbar.php");
+<?php include("parties/navbar.php"); 
 $row = $_SESSION['login-check'];
 $sql = "SELECT * FROM tbl_user WHERE id = '" . $row['id'] . "'";
 $result = mysqli_query($conn, $sql);
 $rows = mysqli_fetch_assoc($result);
 ?>
 
-<section class="account">
-    <div class="account-wrapper">
-        <div class="account-profile">
-            <div class="account-profile-img">
-                <img src="../img/user/<?php echo $rows['img']; ?>" alt="">
-            </div>
-            <div class="account-logout">
-                <p><?php echo $rows['fullname'] ?></p>
-                <a href="logout.php">Logout</a>
-            </div>
-        </div>
-
-        <div class="account-details">
-
-            <div class="account-nav">
-                <ul>
-                    <a href="account.php">
-                        <li class="active">User Information</li>
-                    </a>
-                </ul>
+    <section class="account">
+        <div class="account-wrapper">
+            <div class="account-profile">
+                <div class="account-profile-img">
+                    <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/user/<?php echo $rows['img']; ?>" alt="">
+                </div>
+                <div class="account-logout">
+                    <p><?php echo $rows['fullname'] ?></p>
+                    <a href="logout.php">Logout</a>
+                </div>
             </div>
 
-            <div class="account-information">
-                <h1>User Information</h1>
-                <?php
-                if (isset($_SESSION['account'])) {
-                    echo '<h3 class="success" >' . $_SESSION['account'] . '</h3>';
-                    unset($_SESSION['account']);
-                }
-                ?>
-                <div class="user-information">
-                    <form action="" method="post" class="form1">
-                        <?php
-                        if (isset($_SESSION['information'])) {
-                            $errors = $_SESSION['information'];
-                            foreach ($errors as $error) {
-                                echo '<h3 class="error">' . $error . '</h3>';
-                            }
-                            unset($_SESSION['information']);
+            <div class="account-details">
+
+                <div class="account-nav">
+                    <ul>
+                        <a href="account.php"><li class="active">User Information</li></a>
+                        <a href=""><li>Purchase Order</li></a>
+                    </ul>
+                </div>
+
+                <div class="account-information">
+                    <h1>User Information</h1>
+                    <?php
+                        if (isset($_SESSION['account'])) {
+                            echo '<h3 class="success" >' . $_SESSION['account'] .'</h3>';
+                            unset($_SESSION['account']);
                         }
-                        ?>
-                        <label for="full_name">Full name: </label>
-                        <br>
-                        <input type="text" name="fullname" value="<?php echo $rows['fullname'] ?>">
-                        <br>
-                        <label for="username">Username: </label>
-                        <br>
-                        <input type="text" name="username" value="<?php echo $rows['username'] ?>">
-                        <br>
-                        <label for="full_name">Email: </label>
-                        <br>
-                        <input type="email" name="email" value="<?php echo $rows['email'] ?>">
-                        <br><br>
-                        <input type="submit" name="information_submit" value="Update">
-                    </form>
-
-                    <form action="" method="post" class="form2">
-                        <?php
-                        if (isset($_SESSION['password'])) {
-                            $errors = $_SESSION['password'];
-                            foreach ($errors as $error) {
-                                echo '<h3 class="error">' . $error . '</h3>';
+                    ?>
+                    <div class="user-information">
+                        <form action="" method="post" class="form1">
+                            <?php
+                            if (isset($_SESSION['information'])) {
+                                $errors = $_SESSION['information'];
+                                foreach ($errors as $error) {
+                                    echo '<h3 class="error">'.$error.'</h3>';
+                                }
+                                unset($_SESSION['information']);
                             }
-                            unset($_SESSION['password']);
-                        }
-                        ?>
-                        <label for="current-password">Old Password: </label>
-                        <br>
-                        <input type="password" name="current_password" placeholder="Current Password">
-                        <br>
-                        <label for="new-password">New Password: </label>
-                        <br>
-                        <input type="password" name="new_password" placeholder="New Password">
-                        <br>
-                        <input type="password" name="confirm_password" placeholder="Confirm Password">
-                        <br><br>
-                        <input type="submit" name="password_submit" value="Change Password">
-                    </form>
+                            ?>
+                            <label for="full_name">Full name: </label>
+                            <br>
+                            <input type="text" name="fullname" value="<?php echo $rows['fullname'] ?>">
+                            <br>
+                            <label for="username">Username: </label>
+                            <br>
+                            <input type="text" name="username" value="<?php echo $rows['username'] ?>">
+                            <br>
+                            <label for="full_name">Email: </label>
+                            <br>
+                            <input type="email" name="email" value="<?php echo $rows['email'] ?>">
+                            <br><br>
+                            <input type="submit" name="information_submit" value="Update">
+                        </form>
+                        
+                        <form action="" method="post" class="form2">
+                            <?php
+                            if (isset($_SESSION['password'])) {
+                                $errors = $_SESSION['password'];
+                                foreach ($errors as $error) {
+                                    echo '<h3 class="error">'.$error.'</h3>';
+                                }
+                                unset($_SESSION['password']);
+                            }
+                            ?>
+                            <label for="current-password">Old Password: </label>
+                            <br>
+                            <input type="password" name="current_password" placeholder="Current Password">
+                            <br>
+                            <label for="new-password">New Password: </label>
+                            <br>
+                            <input type="password" name="new_password" placeholder="New Password">
+                            <br>
+                            <input type="password" name="confirm_password" placeholder="Confirm Password">
+                            <br><br>
+                            <input type="submit" name="password_submit" value="Change Password">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 <?php
 if (isset($_POST['information_submit'])) {
     $id = $row['id'];
@@ -109,8 +108,8 @@ if (isset($_POST['information_submit'])) {
             $errors[] = "Username already exists.";
         }
     }
-
-    // Email verification (requires additional steps)
+    
+      // Email verification (requires additional steps)
     if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = "Invalid email address.";
     } else {
@@ -126,7 +125,7 @@ if (isset($_POST['information_submit'])) {
         $_SESSION['information'] = $errors;
         header('location:account.php');
         die();
-    }
+    } 
     $sql = "UPDATE tbl_user SET fullname='$fullname', username='$username', email='$email' WHERE id = '$id'";
     $result = mysqli_query($conn, $sql);
 
@@ -165,9 +164,9 @@ if (isset($_POST['password_submit'])) {
         $_SESSION['password'] = $errors;
         header('location:account.php');
         die();
-    }
-    // Hash the new password before storing it in the database
-    $hashed_new_password = MD5($new_password);
+    } 
+        // Hash the new password before storing it in the database
+    $hashed_new_password = MD5($new_password); 
     $sql = "UPDATE tbl_user SET pwd='$hashed_new_password' WHERE id = '" . $row['id'] . "'";
     $result = mysqli_query($conn, $sql);
     if ($result) {

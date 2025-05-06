@@ -11,12 +11,10 @@ if (empty($_SESSION['cart'])) {
 // Retrieve the total price from the session
 $totalPrice = isset($_SESSION['total_price']) ? $_SESSION['total_price'] : 0;
 
-$row = $_SESSION['login-check'];
-
 // Process the payment if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $paymentMethod = $_POST['payment_method'];
-    $userId = $row['id']; // Replace with the actual user ID
+    $userId = 1; // Replace with the actual user ID
     $paymentStatus = 'Paid';
     $transactionId = uniqid(); // Generate a unique transaction ID
 
@@ -39,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Payment</title>
     <link rel="stylesheet" href="../css/style.css" />
@@ -51,16 +48,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-
         .payment-form label {
             display: block;
             margin-bottom: 10px;
         }
-
         .payment-form input[type="radio"] {
             margin-right: 5px;
         }
-
         .payment-form button {
             display: block;
             width: 100%;
@@ -71,9 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-radius: 5px;
             cursor: pointer;
         }
-
-        .credit-card-info,
-        .tng-info {
+        .credit-card-info, .tng-info {
             margin-top: 10px;
             padding: 10px;
             background-color: #f5f5f5;
@@ -81,7 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     </style>
 </head>
-
 <body>
     <br><br><br><br>
     <a href='cart.php' class="btn-back">Back to Cart</a>
@@ -92,10 +83,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label>
                 <input type="radio" name="payment_method" value="tng" required>
                 TNG
+                <div class="tng-info" style="display: none;">
+                    <img src="../img/tng.jpg" alt="TNG" width="150" height="150">
+                </div>
             </label>
-            <div class="tng-info" style="display: none;">
-                <img src="../img/tng.jpg" alt="TNG" width="150" height="150">
-            </div>
             <label>
                 <input type="radio" name="payment_method" value="credit_card" required>
                 Credit Card
@@ -140,5 +131,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </script>
 </body>
 <?php include("parties/footer.php"); ?>
-
 </html>

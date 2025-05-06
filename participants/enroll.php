@@ -24,7 +24,7 @@
     <!-- Navbar (sit on top) -->
     <section class="nav">
         <div class="logo">
-          <img src="../img/wushu_society_logo.png" alt="Wushu Society Logo" />
+          <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/wushu_society_logo.png" alt="Wushu Society Logo" />
         </div>
         <nav>
             <ul>
@@ -61,7 +61,7 @@
             <button type="submit"><img src="../img/search.png" alt="search button"></button>
           </form>
           <div class="cart">
-            <img src="../img/grocery-store.png" alt="cart" class="cart-img">
+            <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/grocery-store.png" alt="cart" class="cart-img">
           </div>
         </div>
     </section>
@@ -91,7 +91,7 @@
 
     <div style="background-color: black">
       <div class="w3-display-container" style="margin-bottom: 50px">
-        <img src="../img/kungfu2.webp" style="width: 100%" />
+        <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/kungfu2.webp" style="width: 100%" />
         <div
           class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
           style="bottom: 10%; opacity: 0.7; width: 70%"
