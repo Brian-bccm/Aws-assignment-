@@ -25,7 +25,7 @@ if(isset($_POST['submit'])) {
     $img = "Product_Category_" . rand(0000,9999) . '.' . $ext;
 
     $source_path = $_FILES['img']['tmp_name'];
-    $destination_path = "../img/category/" . $img;
+    $destination_path = "http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/category/" . $img;
 
     $upload = move_uploaded_file($source_path, $destination_path);
     if(!$upload) {

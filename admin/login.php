@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Food Order System</title>
     <link rel="stylesheet" href="../css/admin.css">
-    <link rel="icon" type="image/x-icon" href="../img/wushu_society_logo.png">
+    <link rel="icon" type="image/x-icon" href="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/wushu_society_logo.png">
 </head>
 <body class="admin-login">
     <div class="login">  
         <a href="../participants/intro.php">
-             <img src="../img/left.png" alt="">Back
+             <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/left.png" alt="">Back
         </a>
 
         <?php

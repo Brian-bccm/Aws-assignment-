@@ -67,7 +67,7 @@ if (isset($_POST['submit'])) {
         $img = "Product_" . time() . '.' . $ext;
 
         $source_path = $_FILES['product_img']['tmp_name'];
-        $destination_path = "../img/product/" . $img;
+        $destination_path = "http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/product/" . $img;
 
         $upload = move_uploaded_file($source_path, $destination_path);
 
@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
         update_product($conn, $_POST['id'], $_POST['product_category'], $_POST['product_name'], $_POST['product_description'], $_POST['product_price'], $img);
 
         if (!empty($existing_img) && file_exists("../img/product/" . $existing_img)) {
-            unlink("../img/product/" . $existing_img);
+            unlink("http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/product/" . $existing_img);
         }
         header('Location: manage-products.php');
         exit;

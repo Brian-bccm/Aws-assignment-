@@ -105,11 +105,11 @@
                         <?php 
                         if (empty($row['img'])) {
                             ?>
-                            <img src="../img/default-user-profile.jpg">
+                            <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/default-user-profile.jpg">
                             <?php
                         }else {
                             ?>
-                            <img src="../img/user/<?php echo $row['img']; ?>">
+                            <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/user/<?php echo $row['img']; ?>">
                             <?php
                         }
                         ?>
@@ -134,7 +134,7 @@
                 ?>
                     <a href="manage-user.php">
                         <div class="user">
-                            <img src="../img/default-user-profile.jpg">
+                            <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/default-user-profile.jpg">
                             <h2>More</h2>
                             <p>New User</p>
                         </div>

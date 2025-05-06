@@ -10,7 +10,7 @@ if(isset($_GET['id']))
     if ($count == 1) {
         $row = mysqli_fetch_assoc($result2);
         $img = $row['img'];
-        unlink("../img/admin/" . $img);
+        unlink("http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/admin/" . $img);
     }
     $sql1 = "DELETE FROM tbl_admin WHERE id = $id";
     $result1 = mysqli_query($conn, $sql1);

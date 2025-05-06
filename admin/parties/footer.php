@@ -45,7 +45,7 @@
 
             <div class="user-profile">
                 <div class="logo">
-                    <img src="../img/background-img.png">
+                    <img src="http://awsgraduatebucket.s3-website-us-east-1.amazonaws.com/img/background-img.png">
                     <h2>Kung Fu</h2>
                     <p>TAR UMT Penang Branch Wushu Society</p>
                 </div>
