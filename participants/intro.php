@@ -32,6 +32,11 @@
   <body>
     <!-- Navbar content -->
     <!-- Navbar (sit on top) -->
+        <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
     <?php include("parties/navbar-2.php") ?>
 
       <!-- Navbar on small screens -->
