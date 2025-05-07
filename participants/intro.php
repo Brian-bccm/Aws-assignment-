@@ -1,22 +1,3 @@
-if ($conn->connect_error) {
-    die("DB failed: " . $conn->connect_error);
-}
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Check if session directory is writable
-$sessionPath = ini_get('session.save_path');
-if (!is_writable($sessionPath)) {
-    die("Session directory ($sessionPath) is not writable");
-}
-
-if (session_status() === PHP_SESSION_NONE) {
-    if (!session_start()) {
-        die('Failed to start session');
-    }
-}
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
